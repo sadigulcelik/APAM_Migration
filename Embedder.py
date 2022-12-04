@@ -154,7 +154,7 @@ def Gravity_data_aug(df,dist_measure):
 
 
 
-def draw_emb(A,s,countries,country_data):
+def draw_emb(A,s,countries,country_data, title=""):
     N = len(countries)
     rs = np.zeros((N,N))
     for i in range(N):
@@ -166,6 +166,7 @@ def draw_emb(A,s,countries,country_data):
 
 
     plt.figure(figsize = (8,8))
+    plt.title(title, size = 20)
 
 
     for i in range(0,len(countries)):
