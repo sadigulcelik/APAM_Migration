@@ -66,12 +66,7 @@ for c1 in countries:
 preds = np.array(predictions)
 logpreds = np.log(np.sum(np.exp(preds),axis = 1))
 logtargets = np.log(np.array(targets)+1)
-plt.plot(logtargets, logtargets)
-plt.scatter(logpreds,logtargets)
-
 migrations = np.array(migrations)
 migflat = (migrations.flatten())
 predsflat = preds.flatten()
-print(np.linalg.norm(np.log(migflat)- predsflat))
 
-plt.scatter(np.log(migflat), predsflat)
