@@ -40,7 +40,7 @@ for c1 in countries:
         
         while(len(arr)<50):
             norm = np.random.normal(size = 2)
-            new = cur + 0.3*norm
+            new = cur + stdofhop*norm
             p1 = 1
             for j in range(0,len(pred)):
                 p1*=gamma.pdf(pred[j]-new[j],a, loc = loc, scale = scale)
